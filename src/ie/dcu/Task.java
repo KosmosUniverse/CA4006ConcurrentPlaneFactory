@@ -6,7 +6,7 @@ public class Task {
 	private int amountOfWork;
 	private String name;
 	
-	// Contructor
+	// Constructor
 	public Task(int aircraftId, int work, String name) {
 		this.aircraftId = aircraftId;
 		this.amountOfWork = work;

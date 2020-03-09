@@ -4,6 +4,6 @@ package ie.dcu;
 public enum PlaneStatus {
 	OVERLOAD,
 	FINISHED,
-	PROGRESS,
+	PROGRESS,	
 	INITIAL
 }
