@@ -1,7 +1,7 @@
 package ie.dcu;
 
 // This class represent a robot, that will have a threaded method
-public class Robot {
+public class Robot implements Runnable{
 	private int id;
 	private int maxAmountOfWork;
 	private Tasks tasks;
@@ -29,5 +29,17 @@ public class Robot {
 		if ((currentWork + task.getAmountOfWork()) > this.maxAmountOfWork)
 			return (false);
 		return (true);
+	}
+
+	@Override
+	public void run() {
+		System.out.println("Hello by thread nb " + id);
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Goodbye by thread nb " + id);
 	}
 }
